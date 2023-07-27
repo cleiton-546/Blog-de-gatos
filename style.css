@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --color-base-gray-100: #065E7C;
+    --color-base-gray-300: #387E96;
+    --color-base-gary-800: #202024;
+    --color-base-gray-900: #121214;
+    --color-base-white-100: #F4FCFF;
+    --color-base-white-: #ffffff;
+}
+
+html, body {
+    font-family: 'Mulish', sans-serif;
+}
+
+header form {
+    flex: 1;
+}
+
+.app {
+    overflow-x: hidden;
+    font-family: 'Mulish', sans-serif;
+    display: grid;
+    background-color: var(--color-base-white-);
+    grid-template-areas:
+    'header'
+    'maim'
+    'aside'
+    'footer';
+}
+
+.header-content {
+    grid-area: header;
+    background-color: var(--color-base-gray-100);
+    color: var(--color-base-white-);
+
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 1.2rem 2.8rem;
+
+    gap: 2.5rem;
+}
+
+.logo {
+    width: 4.2rem;
+    height: 4.2rem;
+}
+
+.logo img:hover {
+    animation: jump 0.3s;
+}
+
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 99.9rem;
+    object-fit: cover;
+}
+
+.perfil img:hover {
+    animation: jump 0.3s;
+}
+
+
+.input-wrapper label {
+   
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    color: var(--color-base-white-);
+    box-sizing: content-box;
+
+  
+}
+
+.input-wrapper input {
+
+    width: 100%;
+    padding: 1.6rem;
+    
+
+
+    border: 0;
+    border-radius: 0.4rem;
+    font-family: 'Mulish', sans-serif;
+   
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: var(--color-base-gray-300);
+}
+
+.input-wrapper input::placeholder {
+    opacity: 1;
+    color: var(--color-base-white-);
+}
+
+
+.cover {
+    display: grid;
+    
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cover img {
+    max-width: 80.3rem;
+    max-height: 40.5rem;
+    height: 22rem;
+    width: 100%;
+    
+}
+
+.Survey {
+    padding: 3.1rem 6.6rem 3.1rem 2.2rem;
+}
+
+.Survey h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    margin-bottom: 0.8rem;
+   
+}
+
+.btn {
+    border: 99.9rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.btn1, .btn2 {
+    background-color: var(--color-base-gray-100);
+    width: 4rem;
+    height: 4rem;
+    padding: 1.2rem;
+    border-radius: 99.9rem;
+    
+}
+
+.btn2 {
+    background-color:var(--color-base-gray-100);
+}
+
+.Description {
+    padding: 3.1rem 0;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    color: var(--color-base-gray-900);
+}
+
+aside {
+    padding: 0 2.4rem 3.9rem 2.2rem;
+}
+
+
+
+.sub-container h1 {
+    margin-bottom: 3.2rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+}
+
+.gallery {
+    gap: 3.2rem;
+}
+
+.item {
+    display: flex;
+    margin-bottom: 3.2rem;
+  
+
+}
+
+.item img{
+    object-fit: cover;
+    border-radius: 0.5rem;
+   
+}
+
+.details {
+    margin-left: 1.6rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.details p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+}
+
+.container {
+    background-color: var(--color-base-gray-300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.2rem;
+
+}
+
+.container p {
+    color: var(--color-base-white-);
+    
+}
+
+
+
+
+@media (min-width: 768px) {
+    .app {
+        display: grid;
+        grid-template-areas: 
+        "image aside"
+        "main aside"
+        "main aside";
+        background-color: var(--color-base-white-100);
+
+    }
+
+main {
+  height: 95.5rem;
+  width: 91.2rem;
+  padding: 4.4rem 0 0 9rem;
+  
+}
+
+.cover {
+    grid-area: image;
+    max-width: 80rem;
+    max-height: 40.5rem;
+    border-radius: 0.5rem;
+    height: 40.5rem;
+    
+}
+
+
+.cover img {
+
+   height: 40.5rem;
+    border-radius: 0.5rem;
+}
+
+.Survey {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+    margin-top: 4.4rem;
+}
+
+}
+  
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
